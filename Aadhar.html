@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style> 
+    body{
+        margin: 100px auto;
+        display: flex;
+         justify-content:center;  
+         background-color: black;    
+    }
+    .box{
+        height: 330px;
+        width: 500px;
+        background-color:white;
+        border: 4px solid;  
+        border-radius: 30px;    
+    }
+    .header{
+        display: flex;
+        flex-direction: row;
+        height: 25px;
+        width: 100%;
+    }
+    .aadhar{
+        height: 90px;
+        width: 500px;
+        background:transparent;
+        border-radius: 25px;
+       
+    }
+   
+    .bodypart{
+        height: 205px;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        background-color:white;
+        margin-top: 40px;
+    }
+    #photo{
+        height: 160px;
+        width: 130px;
+        border: 1px solid;
+        margin: 30px 0px 0px 10px;   
+    }
+     #img{
+        height: 160px;
+        width: 130px;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .info{
+        height: 180px;
+        width: 230px;
+        border: 1px solid transparent;
+        margin: 30px 0px 0px 10px;
+        text-align: left;
+        font-size: 21px;
+    }
+   
+    .qr{
+        height: 100px;
+        width: 100px;
+        border: 1px solid transparent;
+        margin: 90px 0px 0px 5px;
+        
+    }
+    .Qr{
+        height: 100px;
+        width: 100%;
+        text-align: center;
+    }
+  .gap
+  {
+    height: 3px;
+    width: 100%;
+    background-color: rgb(255, 0, 0);
+    margin-top: 3px;
+  }
+    .footer{
+        background-color:white ;
+        border-radius: 0px 0px 25px 25px;
+        width: 100%;
+        height: 40px;
+       border-bottom: 4px solid;
+      
+    }
+    .adharid{
+        font-size: 30px;
+        font-weight: 700px;
+        margin: 100px 0px 0px 20px;
+       
+    }
+    .slogan{
+        color: black;
+        font-size: 25px;
+        margin-top: 15px;
+        margin-left: 15%;
+    }
+   #generaterandomDetails{
+    display: block;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    margin-top: 250px;
+    margin-left: 50px;
+   }
+
+</style>
+<body>
+    <div class="box">
+        <div class="header">
+           <img class="aadhar" src="./images/aadg.jpg" alt="">
+          
+        </div>
+        <div class="bodypart">
+           <div id="photo">
+             <img id="img"src="https://png.pngtree.com/png-vector/20220113/ourmid/pngtree-original-vector-female-blue-background-certificate-photo-png-image_4166143.png" alt="">
+           </div>
+           <div class="info">
+              <strong>Name:</strong><span id="name"></span><br>
+              <strong>DOB:</strong><span id="dob"></span><br>
+             <strong>Gender:</strong><span id="gender"></span> <br><br><br>
+              <span class="adharid" id="adharNumber">9333 2027 4255</span>
+           </div>
+           <div class="qr">
+              <img class="Qr" src="./images/QR-code.webp" alt="">
+           </div>
+           
+       </div>
+       <div class="gap"></div>
+       <div class="footer">
+          
+           <div class="slogan">आधार - सामान्य  माणसाचा  अधिकार</div>
+       </div>
+    </div>
+
+    <script>
+        let aadharData = [{name:"Sakshi Vilas More",dob:"26/04/2002",gender:"Female",photo:"https://thumbs.dreamstime.com/b/cute-anime-girl-character-illustration-eps-88581972.jpg"},
+                          {name:"Suyash Vilas More",dob:"09/05/2005",gender:"Male",photo:"https://www.shutterstock.com/image-vector/simple-cartoon-avatar-vector-flat-260nw-1988123576.jpg"},
+                          {name:"Shlok Vijay More",dob:"17/10/2005",gender:"Male",photo:"https://cdn5.vectorstock.com/i/1000x1000/17/84/cute-young-man-avatar-character-cartoon-style-vector-36211784.jpg"},
+                          {name:"Ashwini Dipak pawar",dob:"06/04/2002",gender:"Female",photo:"https://media.istockphoto.com/id/1268988213/vector/illustration-of-a-young-woman-in-a-suit-id-photo-size.jpg?s=612x612&w=0&k=20&c=XJwY7mrLPCF5hkGqcs_W_aNThDIBvfWXTDJ_vsX4GyY="},
+                          {name:"Pankhu Ashutosh Aher",dob:"27/02/2020",gender:"Female",photo:"https://thumbs.dreamstime.com/b/cute-anime-girl-character-illustration-eps-88581972.jpg"},
+                          {name:"Shubham Kailas Aher",dob:"03/08/2002",gender:"Male",photo:"https://cdn5.vectorstock.com/i/1000x1000/17/84/cute-young-man-avatar-character-cartoon-style-vector-36211784.jpg"},
+                          {name:"Pragati Samadhan Pagar",dob:"21/09/2002",gender:"Female",photo:"https://thumbs.dreamstime.com/b/cute-anime-girl-character-illustration-eps-88581972.jpg"},
+                          {name:"Rutuja Ambadas More",dob:"28/04/2002",gender:"Female",photo:"https://media.istockphoto.com/id/1268988213/vector/illustration-of-a-young-woman-in-a-suit-id-photo-size.jpg?s=612x612&w=0&k=20&c=XJwY7mrLPCF5hkGqcs_W_aNThDIBvfWXTDJ_vsX4GyY="},
+                          {name:"Saransh Yogesh patil",dob:"09/05/2022",gender:"Male",photo:"https://www.shutterstock.com/image-vector/simple-cartoon-avatar-vector-flat-260nw-1988123576.jpg"},
+                          {name:"Rahul Dipak Nikam",dob:"16/07/2002",gender:"Male",photo:"https://cdn5.vectorstock.com/i/1000x1000/17/84/cute-young-man-avatar-character-cartoon-style-vector-36211784.jpg"}]
+
+
+                
+     function showProfile(personName){
+        const person = aadharData.find(data => data.name.toLowerCase()=== personName.toLowerCase())
+                     if(person){
+                            document.getElementById('name').innerHTML = person.name
+                            document.getElementById('dob').innerHTML = person.dob
+                            document.getElementById('gender').innerHTML = person.gender
+                            document.getElementById('img').src = person.photo
+                            const aadharNumber = Math.floor(Math.random()*1000000000000)
+                            document.getElementById('adharNumber').textContent = String(aadharNumber).replace(/(\d{4})(\d{4})(\d{4})/, '$1 $2 $3');
+
+                          }
+                          else{
+                            alert("Person not found!")
+                          }
+                        }
+                const inputName = prompt("Enter the Person name:")
+                if(inputName){
+                    showProfile(inputName)
+                }
+
+                          
+                          
+
+
+
+
+
+       
+       
+    </script>
+</body>
+</html>
